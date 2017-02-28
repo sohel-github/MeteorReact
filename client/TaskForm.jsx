@@ -11,15 +11,30 @@ export default class TaskForm extends Component{
 	}
 
 	render(){
-		return(
-			<form className="new-task" onSubmit={this.addTask.bind(this)}>
-	            <input
-	              className="form-control bottom"	
-	              type="text"
-	              name="task"
-	              placeholder="Type tasks" />
-	        </form>
-		);
+		
+		if( !this.props.currentUser ){
+
+			return(
+				<div>
+					<form className="new-task" onSubmit={this.addTask.bind(this)}>
+			            <input
+			              className="form-control bottom"	
+			              type="text"
+			              name="task"
+			              placeholder="Type tasks" />
+			        </form>
+				</div>
+			);
+
+		}else{
+
+			return(
+				<div>Please signin to add task</div>
+			);
+						
+		}	
+
+		
 	}
 
 }
