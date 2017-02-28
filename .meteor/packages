@@ -25,3 +25,4 @@ twbs:bootstrap
 momentjs:moment
 accounts-ui
 accounts-password
+kadira:flow-router

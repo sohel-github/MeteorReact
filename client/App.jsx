@@ -13,12 +13,12 @@ import AccountUi from './AccountUi.jsx';
 
 import { Tasks } from "../collections/tasks.js";
 
-import './index.html';
+//import './index.html';
 
 
-Meteor.startup(() => {
+/*Meteor.startup(() => {
   ReactDOM.render(<App />, document.getElementById('react-view'));
-});
+});*/
 
 Meteor.subscribe('tasks');
 
